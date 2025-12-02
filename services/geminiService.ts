@@ -10,7 +10,7 @@ export const generateExecutiveSummary = async (
     throw new Error("API Key is missing.");
   }
 
-  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
   const prompt = `
     Actúa como un Consultor Senior experto en Automatización Robótica de Procesos (RPA) e Inteligencia Artificial.
